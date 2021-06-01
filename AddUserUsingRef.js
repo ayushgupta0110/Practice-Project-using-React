@@ -28,6 +28,8 @@ const AddUser = (props) => {
       return;
     }
     props.onAddUser(enteredUsername, enteredAge);
+    
+    //Not a good practice to update the refs as they can be hacky sometimes
     userInputRef.current.value='';
     ageInputRef.current.value='';
   };
